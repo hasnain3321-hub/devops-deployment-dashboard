@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Deployment Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: #f1f5f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: #1e293b;
+            border-radius: 14px;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        .subtitle {
+            color: #cbd5e1;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 14px;
+            background: #14532d;
+            color: #bbf7d0;
+            border-radius: 20px;
+            margin: 15px 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .card {
+            padding: 18px;
+            background: #334155;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-top: 0;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #0284c7;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #0369a1;
+        }
+
+        #details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #334155;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>DevOps Deployment Dashboard</h1>
+
+        <p class="subtitle">
+            My Docker and Nginx Deployment Project
+        </p>
+
+        <div class="status">Demo Deployment Dashboard</div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Application</h3>
+                <p>My Docker Website</p>
+            </div>
+
+            <div class="card">
+                <h3>Version</h3>
+                <p>v3.0</p>
+            </div>
+
+            <div class="card">
+                <h3>Web Server</h3>
+                <p>Nginx</p>
+            </div>
+
+            <div class="card">
+                <h3>Container Port</h3>
+                <p>80</p>
+            </div>
+        </div>
+
+        <button onclick="toggleDetails()">
+            Show Deployment Details
+        </button>
+
+        <div id="details">
+            <h3>Deployment Information</h3>
+            <p><strong>Platform:</strong> Docker</p>
+            <p><strong>Base Image:</strong> nginx:alpine</p>
+            <p><strong>Container Port:</strong> 80</p>
+            <p><strong>Host Port:</strong> 8084</p>
+            <p><strong>Project Type:</strong> Static Website</p>
+            <p><strong>Deployment:</strong> Local Demo</p>
+        </div>
+
+        <footer>
+            Built as a beginner DevOps portfolio project.
+        </footer>
+    </div>
+
+    <script>
+        function toggleDetails() {
+            const details = document.getElementById("details");
+            const button = document.querySelector("button");
+
+            if (details.style.display === "block") {
+                details.style.display = "none";
+                button.textContent = "Show Deployment Details";
+            } else {
+                details.style.display = "block";
+                button.textContent = "Hide Deployment Details";
+            }
+        }
+    </script>
+</body>
+</html>
+
